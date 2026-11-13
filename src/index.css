@@ -15,17 +15,10 @@
   padding: var(--space-l) clamp(1rem, 5vw, 3rem);
 }
 
-.project-list {
-  list-style: none;
-  padding-left: 0;
-  padding-top: var(--space-s);
-  padding-bottom: var(--space-s);
-  margin: 0;
-}
-
 hr {
   border: none;
-  border-top: 1px solid var(--accent);}
+  border-top: 1px solid var(--accent);
+}
 
 .progress-row {
   display: flex;

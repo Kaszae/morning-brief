@@ -1,0 +1,7 @@
+.project-list {
+  list-style: none;
+  padding-left: 0;
+  padding-top: var(--space-s);
+  padding-bottom: var(--space-s);
+  margin: 0;
+}
