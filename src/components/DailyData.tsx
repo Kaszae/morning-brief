@@ -20,5 +20,5 @@ export function DailyData({date, lowestTemp, highestTemp, tempInfo}: Props): any
     const year = date.getFullYear()
     const calendarWeek = getCalendarWeek(date);
 
-    return <p>{weekday}, den {dayOfMonth}. {month} {year} | KW {calendarWeek} | {lowestTemp}° / {highestTemp}°, {tempInfo}</p>
+    return <p style={{ color: 'var(--accent)' }}>{weekday}, den {dayOfMonth}. {month} {year} | KW {calendarWeek} | {lowestTemp}° / {highestTemp}°, {tempInfo}</p>
 }
