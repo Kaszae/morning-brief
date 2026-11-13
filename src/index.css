@@ -27,6 +27,14 @@ hr {
   border: none;
   border-top: 1px solid var(--accent);}
 
+.progress-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(var(--space-m), 6vw, var(--space-xl));
+  margin-block: var(--space-l);
+}
+
 @font-face {
   font-family: 'Recoleta';
   src: url('./assets/fonts/Recoleta Regular.woff2') format('woff2');

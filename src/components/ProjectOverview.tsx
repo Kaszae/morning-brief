@@ -1,11 +1,11 @@
-export type ProjectOverview = {
+export type Project = {
     name: string,
     duration: number,
     info: string
 }
 
 interface TaskInfoProps {
-    projects: ProjectOverview[];
+    projects: Project[];
 }
 
 export function ProjectOverview({ projects }: TaskInfoProps) {
