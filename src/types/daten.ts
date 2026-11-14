@@ -65,6 +65,37 @@ export type UniDaten = {
     wiederkehrend: TodoistTask[];    // Ergebnis von recurring & ##Uni
 };
 
+// Aus dem Werkzeug „schlafdetails“ des Connectors Gesundheit (eine Nacht pro Tag des Aufwachens)
+export type SchlafNacht = {
+    datum: string;
+    fertig: boolean;                       // Nacht abgeschlossen und mit Schlafphasen ausgewertet
+    minuten_schlaf: number | null;
+    minuten_wach: number | null;
+    minuten_im_bett: number | null;
+    minuten_bis_eingeschlafen: number | null;
+    tief: number;
+    rem: number;
+    leicht: number;
+    kurze_wachphasen: number;              // Unruhe
+    lange_wachphasen: number;              // Wachphasen über 5 Minuten
+    minuten_lange_wachphasen: number;
+};
+
+// Aus dem Werkzeug „herzfrequenzzonen“ des Connectors Gesundheit (Minuten pro Zone und Tag)
+export type ZonenTag = {
+    datum: string;
+    leicht: number;
+    moderat: number;
+    intensiv: number;
+    spitze: number;
+};
+
+export type HealthDaten = {
+    verlauf: HealthVerlauf;
+    schlafdetails?: SchlafNacht[];         // fehlt, wenn der Connector das Werkzeug noch nicht hat
+    zonen?: ZonenTag[];                    // fehlt, solange der Sammler keine Herzfrequenzzonen liefert
+};
+
 export type Daten = {
     heute: string;             // 'YYYY-MM-DD' in Europe/Berlin
     name: string;
@@ -74,5 +105,5 @@ export type Daten = {
     offen: TodoistTask[];
     uni: UniDaten | null;
     habits: HabitDaten | null; // null, wenn es das Projekt „Gewohnheiten“ nicht gibt
-    health: { verlauf: HealthVerlauf } | null;
+    health: HealthDaten | null;
 };

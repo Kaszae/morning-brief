@@ -138,9 +138,10 @@ export function getHealth(verlauf: HealthVerlauf, today: string): HealthResult {
 // ---------- Ringe mit Feedback ----------
 
 export type HealthRing = {
-    percent: number;
+    percent: number;   // Füllung des Rings, 0–100
     color: string;
     feedback: string;
+    label?: string;    // Text in der Mitte, Standard: Prozentzahl
 };
 
 const IMPROVE = {

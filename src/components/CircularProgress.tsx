@@ -5,10 +5,11 @@ interface CircularProgressProps {
     color: string;
     percent: number;
     info: string;
-    size?: number; // Durchmesser in px, optional
+    size?: number;  // Durchmesser in px, optional
+    label?: string; // Text in der Mitte, Standard: Prozentzahl
 }
 
-export function CircularProgress({ name, color, percent, info, size = 120 }: CircularProgressProps) {
+export function CircularProgress({ name, color, percent, info, size = 120, label }: CircularProgressProps) {
     const strokeWidth = size * 0.1;
     const radius = (size - strokeWidth) / 2;
     const circumference = 2 * Math.PI * radius;
@@ -50,7 +51,7 @@ export function CircularProgress({ name, color, percent, info, size = 120 }: Cir
                     )}
                 </svg>
                 <span className="circular-progress__value" style={{ fontSize: size * 0.22 }}>
-                    {Math.round(value)}%
+                    {label ?? `${Math.round(value)}%`}
                 </span>
             </div>
 

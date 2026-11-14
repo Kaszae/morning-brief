@@ -2346,6 +2346,500 @@ export const daten: Daten = {
                     "wert": 372
                 }
             ]
-        }
+        },
+        "schlafdetails": [
+            {
+                "datum": "2026-10-28",
+                "fertig": true,
+                "minuten_schlaf": 422,
+                "minuten_wach": 54,
+                "minuten_im_bett": 476,
+                "minuten_bis_eingeschlafen": 9,
+                "tief": 62,
+                "rem": 78,
+                "leicht": 282,
+                "kurze_wachphasen": 10,
+                "lange_wachphasen": 2,
+                "minuten_lange_wachphasen": 12
+            },
+            {
+                "datum": "2026-10-29",
+                "fertig": true,
+                "minuten_schlaf": 362,
+                "minuten_wach": 44,
+                "minuten_im_bett": 406,
+                "minuten_bis_eingeschlafen": 17,
+                "tief": 50,
+                "rem": 74,
+                "leicht": 238,
+                "kurze_wachphasen": 17,
+                "lange_wachphasen": 1,
+                "minuten_lange_wachphasen": 8
+            },
+            {
+                "datum": "2026-10-30",
+                "fertig": true,
+                "minuten_schlaf": 456,
+                "minuten_wach": 46,
+                "minuten_im_bett": 502,
+                "minuten_bis_eingeschlafen": 10,
+                "tief": 60,
+                "rem": 90,
+                "leicht": 306,
+                "kurze_wachphasen": 15,
+                "lange_wachphasen": 0,
+                "minuten_lange_wachphasen": 0
+            },
+            {
+                "datum": "2026-10-31",
+                "fertig": true,
+                "minuten_schlaf": 448,
+                "minuten_wach": 67,
+                "minuten_im_bett": 515,
+                "minuten_bis_eingeschlafen": 18,
+                "tief": 65,
+                "rem": 88,
+                "leicht": 295,
+                "kurze_wachphasen": 18,
+                "lange_wachphasen": 2,
+                "minuten_lange_wachphasen": 22
+            },
+            {
+                "datum": "2026-11-01",
+                "fertig": true,
+                "minuten_schlaf": 430,
+                "minuten_wach": 43,
+                "minuten_im_bett": 473,
+                "minuten_bis_eingeschlafen": 7,
+                "tief": 77,
+                "rem": 83,
+                "leicht": 270,
+                "kurze_wachphasen": 16,
+                "lange_wachphasen": 0,
+                "minuten_lange_wachphasen": 0
+            },
+            {
+                "datum": "2026-11-02",
+                "fertig": true,
+                "minuten_schlaf": 448,
+                "minuten_wach": 45,
+                "minuten_im_bett": 493,
+                "minuten_bis_eingeschlafen": 8,
+                "tief": 62,
+                "rem": 88,
+                "leicht": 298,
+                "kurze_wachphasen": 9,
+                "lange_wachphasen": 0,
+                "minuten_lange_wachphasen": 0
+            },
+            {
+                "datum": "2026-11-03",
+                "fertig": true,
+                "minuten_schlaf": 450,
+                "minuten_wach": 54,
+                "minuten_im_bett": 504,
+                "minuten_bis_eingeschlafen": 19,
+                "tief": 80,
+                "rem": 97,
+                "leicht": 273,
+                "kurze_wachphasen": 17,
+                "lange_wachphasen": 1,
+                "minuten_lange_wachphasen": 9
+            },
+            {
+                "datum": "2026-11-04",
+                "fertig": true,
+                "minuten_schlaf": 449,
+                "minuten_wach": 55,
+                "minuten_im_bett": 504,
+                "minuten_bis_eingeschlafen": 17,
+                "tief": 62,
+                "rem": 99,
+                "leicht": 288,
+                "kurze_wachphasen": 14,
+                "lange_wachphasen": 1,
+                "minuten_lange_wachphasen": 10
+            },
+            {
+                "datum": "2026-11-05",
+                "fertig": true,
+                "minuten_schlaf": 431,
+                "minuten_wach": 54,
+                "minuten_im_bett": 485,
+                "minuten_bis_eingeschlafen": 15,
+                "tief": 70,
+                "rem": 89,
+                "leicht": 272,
+                "kurze_wachphasen": 8,
+                "lange_wachphasen": 1,
+                "minuten_lange_wachphasen": 11
+            },
+            {
+                "datum": "2026-11-06",
+                "fertig": true,
+                "minuten_schlaf": 526,
+                "minuten_wach": 73,
+                "minuten_im_bett": 599,
+                "minuten_bis_eingeschlafen": 7,
+                "tief": 79,
+                "rem": 103,
+                "leicht": 344,
+                "kurze_wachphasen": 11,
+                "lange_wachphasen": 2,
+                "minuten_lange_wachphasen": 20
+            },
+            {
+                "datum": "2026-11-07",
+                "fertig": true,
+                "minuten_schlaf": 399,
+                "minuten_wach": 52,
+                "minuten_im_bett": 451,
+                "minuten_bis_eingeschlafen": 16,
+                "tief": 75,
+                "rem": 96,
+                "leicht": 228,
+                "kurze_wachphasen": 12,
+                "lange_wachphasen": 2,
+                "minuten_lange_wachphasen": 12
+            },
+            {
+                "datum": "2026-11-08",
+                "fertig": true,
+                "minuten_schlaf": 414,
+                "minuten_wach": 49,
+                "minuten_im_bett": 463,
+                "minuten_bis_eingeschlafen": 14,
+                "tief": 73,
+                "rem": 79,
+                "leicht": 262,
+                "kurze_wachphasen": 18,
+                "lange_wachphasen": 1,
+                "minuten_lange_wachphasen": 8
+            },
+            {
+                "datum": "2026-11-09",
+                "fertig": true,
+                "minuten_schlaf": 420,
+                "minuten_wach": 42,
+                "minuten_im_bett": 462,
+                "minuten_bis_eingeschlafen": 16,
+                "tief": 59,
+                "rem": 90,
+                "leicht": 271,
+                "kurze_wachphasen": 15,
+                "lange_wachphasen": 0,
+                "minuten_lange_wachphasen": 0
+            },
+            {
+                "datum": "2026-11-10",
+                "fertig": true,
+                "minuten_schlaf": 372,
+                "minuten_wach": 64,
+                "minuten_im_bett": 436,
+                "minuten_bis_eingeschlafen": 24,
+                "tief": 52,
+                "rem": 66,
+                "leicht": 254,
+                "kurze_wachphasen": 21,
+                "lange_wachphasen": 2,
+                "minuten_lange_wachphasen": 27
+            }
+        ],
+        "zonen": [
+            {
+                "datum": "2026-09-30",
+                "leicht": 76,
+                "moderat": 35,
+                "intensiv": 13,
+                "spitze": 6
+            },
+            {
+                "datum": "2026-10-01",
+                "leicht": 65,
+                "moderat": 5,
+                "intensiv": 3,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-02",
+                "leicht": 99,
+                "moderat": 7,
+                "intensiv": 2,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-03",
+                "leicht": 80,
+                "moderat": 42,
+                "intensiv": 11,
+                "spitze": 3
+            },
+            {
+                "datum": "2026-10-04",
+                "leicht": 60,
+                "moderat": 5,
+                "intensiv": 2,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-05",
+                "leicht": 104,
+                "moderat": 37,
+                "intensiv": 10,
+                "spitze": 5
+            },
+            {
+                "datum": "2026-10-06",
+                "leicht": 110,
+                "moderat": 8,
+                "intensiv": 3,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-07",
+                "leicht": 67,
+                "moderat": 41,
+                "intensiv": 21,
+                "spitze": 4
+            },
+            {
+                "datum": "2026-10-08",
+                "leicht": 103,
+                "moderat": 7,
+                "intensiv": 3,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-09",
+                "leicht": 103,
+                "moderat": 0,
+                "intensiv": 1,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-10",
+                "leicht": 63,
+                "moderat": 34,
+                "intensiv": 24,
+                "spitze": 5
+            },
+            {
+                "datum": "2026-10-11",
+                "leicht": 86,
+                "moderat": 1,
+                "intensiv": 0,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-12",
+                "leicht": 93,
+                "moderat": 12,
+                "intensiv": 1,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-13",
+                "leicht": 100,
+                "moderat": 2,
+                "intensiv": 2,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-14",
+                "leicht": 90,
+                "moderat": 38,
+                "intensiv": 12,
+                "spitze": 1
+            },
+            {
+                "datum": "2026-10-15",
+                "leicht": 108,
+                "moderat": 1,
+                "intensiv": 3,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-16",
+                "leicht": 62,
+                "moderat": 10,
+                "intensiv": 1,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-17",
+                "leicht": 100,
+                "moderat": 34,
+                "intensiv": 18,
+                "spitze": 3
+            },
+            {
+                "datum": "2026-10-18",
+                "leicht": 108,
+                "moderat": 7,
+                "intensiv": 3,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-19",
+                "leicht": 90,
+                "moderat": 29,
+                "intensiv": 22,
+                "spitze": 1
+            },
+            {
+                "datum": "2026-10-20",
+                "leicht": 93,
+                "moderat": 8,
+                "intensiv": 1,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-21",
+                "leicht": 72,
+                "moderat": 12,
+                "intensiv": 3,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-22",
+                "leicht": 76,
+                "moderat": 12,
+                "intensiv": 2,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-23",
+                "leicht": 107,
+                "moderat": 0,
+                "intensiv": 2,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-24",
+                "leicht": 108,
+                "moderat": 43,
+                "intensiv": 25,
+                "spitze": 6
+            },
+            {
+                "datum": "2026-10-25",
+                "leicht": 64,
+                "moderat": 7,
+                "intensiv": 3,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-26",
+                "leicht": 90,
+                "moderat": 42,
+                "intensiv": 22,
+                "spitze": 3
+            },
+            {
+                "datum": "2026-10-27",
+                "leicht": 75,
+                "moderat": 3,
+                "intensiv": 1,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-28",
+                "leicht": 69,
+                "moderat": 38,
+                "intensiv": 11,
+                "spitze": 2
+            },
+            {
+                "datum": "2026-10-29",
+                "leicht": 102,
+                "moderat": 7,
+                "intensiv": 3,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-30",
+                "leicht": 79,
+                "moderat": 10,
+                "intensiv": 1,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-10-31",
+                "leicht": 57,
+                "moderat": 29,
+                "intensiv": 20,
+                "spitze": 6
+            },
+            {
+                "datum": "2026-11-01",
+                "leicht": 61,
+                "moderat": 7,
+                "intensiv": 0,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-11-02",
+                "leicht": 84,
+                "moderat": 25,
+                "intensiv": 14,
+                "spitze": 3
+            },
+            {
+                "datum": "2026-11-03",
+                "leicht": 110,
+                "moderat": 10,
+                "intensiv": 1,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-11-04",
+                "leicht": 105,
+                "moderat": 33,
+                "intensiv": 20,
+                "spitze": 4
+            },
+            {
+                "datum": "2026-11-05",
+                "leicht": 99,
+                "moderat": 6,
+                "intensiv": 0,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-11-06",
+                "leicht": 109,
+                "moderat": 5,
+                "intensiv": 3,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-11-07",
+                "leicht": 95,
+                "moderat": 11,
+                "intensiv": 3,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-11-08",
+                "leicht": 110,
+                "moderat": 8,
+                "intensiv": 0,
+                "spitze": 0
+            },
+            {
+                "datum": "2026-11-09",
+                "leicht": 70,
+                "moderat": 45,
+                "intensiv": 19,
+                "spitze": 1
+            },
+            {
+                "datum": "2026-11-10",
+                "leicht": 12,
+                "moderat": 0,
+                "intensiv": 0,
+                "spitze": 0
+            }
+        ]
     }
 };
