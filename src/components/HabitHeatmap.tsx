@@ -4,6 +4,7 @@ import './HabitHeatmap.css';
 
 interface HabitHeatmapProps {
     days: HabitDay[];
+    habitNames: string[];
     color?: string;
 }
 
@@ -32,7 +33,7 @@ function getTooltip(day: HabitDay): string {
     return `${label}: ${status}`;
 }
 
-export function HabitHeatmap({ days, color = 'var(--accent)' }: HabitHeatmapProps) {
+export function HabitHeatmap({ days, habitNames, color = 'var(--accent)' }: HabitHeatmapProps) {
     const today = days[days.length - 1]?.date;
 
     return (
@@ -53,6 +54,11 @@ export function HabitHeatmap({ days, color = 'var(--accent)' }: HabitHeatmapProp
                         />
                     ))}
                 </div>
+                <ul className="heatmap__habits">
+                    {habitNames.map((name) => (
+                        <li key={name}>{name}</li>
+                    ))}
+                </ul>
             </div>
 
             <figcaption className="heatmap__legend">

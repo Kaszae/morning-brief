@@ -24,7 +24,7 @@ hr {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: clamp(var(--space-m), 6vw, var(--space-xl));
+  gap: var(--space-l) clamp(var(--space-m), 6vw, var(--space-xl));
   margin-block: var(--space-l);
 }
 

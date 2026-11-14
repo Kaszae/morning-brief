@@ -1,16 +1,6 @@
-import { toISODate } from './date';
-
-export type Habit = {
-    id: string;
-    name: string;
-    weekdays: number[]; // fällig an: 1 = Mo … 7 = So
-    addedAt: string;    // 'YYYY-MM-DD', vorher zählt das Habit nicht
-};
-
-export type HabitCompletion = {
-    habitId: string;
-    date: string;       // 'YYYY-MM-DD'
-};
+import type { HabitDaten } from '../types/daten';
+import { addDays } from './date';
+import { isoWeekday, parseRecurrence } from './recurrence';
 
 export type HabitDay = {
     date: string;       // 'YYYY-MM-DD'
@@ -18,42 +8,58 @@ export type HabitDay = {
     due: number;        // an dem Tag fällige Habits
 };
 
-/** Wochentag nach ISO: 1 = Mo … 7 = So */
-function isoWeekday(d: Date): number {
-    return d.getDay() || 7;
+const berlinDate = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Europe/Berlin',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+});
+
+/** UTC-Zeitstempel → Kalendertag in Berlin ('YYYY-MM-DD'). 0:30 Uhr nachts zählt so zum richtigen Tag. */
+export function toBerlinDate(utc: string): string {
+    return berlinDate.format(new Date(utc));
 }
 
 /**
  * Für jeden Tag der letzten `weeks` Wochen (ab Montag) bis heute:
- * wie viele Habits fällig waren und wie viele davon erledigt wurden.
- * Abschlüsse an Tagen, an denen das Habit nicht fällig war, zählen nicht.
+ * wie viele Gewohnheiten fällig waren und wie viele davon erledigt wurden.
+ * Wie im Tagesbrief (scripts/heatmap.py, tageswerte):
+ * - Fälligkeit aus dem Wiederholungstext; vor dem Anlagedatum zählt eine Gewohnheit nicht.
+ * - Unbekanntes Muster: zählt nur Abschlüsse, nie einen verpassten Tag.
  */
-export function getHabitDays(
-    habits: Habit[],
-    completions: HabitCompletion[],
-    today: Date,
-    weeks = 12,
-): HabitDay[] {
-    const doneSet = new Set(completions.map((c) => `${c.habitId}|${c.date}`));
+export function getHabitDays(habits: HabitDaten, today: string, weeks = 12): HabitDay[] {
+    const doneDays = new Map<string, Set<string>>();
+    for (const event of habits.erledigt) {
+        const day = toBerlinDate(event.zeit);
+        if (!doneDays.has(event.id)) doneDays.set(event.id, new Set());
+        doneDays.get(event.id)!.add(day);
+    }
 
-    const start = new Date(today.getFullYear(), today.getMonth(), today.getDate());
-    start.setDate(start.getDate() - (isoWeekday(start) - 1) - (weeks - 1) * 7);
-    const end = toISODate(today);
+    const rules = habits.aufgaben.map((task) => ({
+        id: task.id,
+        since: task.addedAt ? toBerlinDate(task.addedAt) : null,
+        isDueOn: parseRecurrence(String(task.recurring || ''), task.dueDate?.slice(0, 10) ?? null),
+    }));
 
+    const start = addDays(today, -(isoWeekday(today) - 1) - (weeks - 1) * 7);
     const days: HabitDay[] = [];
-    for (const d = new Date(start); toISODate(d) <= end; d.setDate(d.getDate() + 1)) {
-        const date = toISODate(d);
+    for (let date = start; date <= today; date = addDays(date, 1)) {
         let due = 0;
         let done = 0;
-
-        for (const habit of habits) {
-            if (date < habit.addedAt) continue;
-            if (!habit.weekdays.includes(isoWeekday(d))) continue;
-            due++;
-            if (doneSet.has(`${habit.id}|${date}`)) done++;
+        for (const habit of rules) {
+            if (habit.since && habit.since > date) continue;
+            const isDone = doneDays.get(habit.id)?.has(date) ?? false;
+            if (habit.isDueOn === null) {
+                if (isDone) {
+                    due++;
+                    done++;
+                }
+            } else if (habit.isDueOn(date)) {
+                due++;
+                if (isDone) done++;
+            }
         }
-
-        days.push({ date, done, due });
+        days.push({ date, done: Math.min(done, due), due });
     }
     return days;
 }

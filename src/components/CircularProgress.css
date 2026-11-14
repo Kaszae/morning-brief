@@ -1,4 +1,5 @@
 .circular-progress {
+  width: 9.5rem;   /* alle gleich breit, damit die Abstände zwischen den Kreisen gleich sind */
   margin: 0;
   display: inline-flex;
   flex-direction: column;

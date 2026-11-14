@@ -16,6 +16,17 @@
   gap: var(--space-s);
 }
 
+/* Habit-Namen rechts neben dem Raster */
+.heatmap__habits {
+  list-style: none;
+  margin: 0 0 0 var(--space-m);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  font-size: 0.875rem;
+}
+
 /* Wochentage links, gleiche Zeilenhöhe wie das Raster */
 .heatmap__labels {
   display: grid;
