@@ -1,75 +1,69 @@
 import type { Daten } from '../types/daten';
 
-// Beispieldaten aus dem Tagesbrief-Skill (tests/beispiel.json).
-// Später ersetzt durch die daten.json, die der neue Skill jeden Morgen sammelt.
+// Ausgedachte Beispieldaten im Format der daten.json (keine echten Aufgaben oder Gesundheitswerte).
+// Später ersetzt durch die Daten, die der Skill jeden Morgen sammelt.
 export const daten: Daten = {
     "heute": "2026-11-10",
-    "name": "Michael",
+    "name": "Alex",
     "wetter": {
-        "hoch": 7,
-        "tief": 2,
-        "himmel": "bewölkt",
-        "niederschlag": "Regen ab 15 Uhr"
+        "hoch": 8,
+        "tief": 3,
+        "himmel": "leicht bewölkt",
+        "niederschlag": "Schauer ab 16 Uhr"
     },
     "projekte": [
         {
-            "id": "6WwHCXH4vPgcFXQx",
+            "id": "proj-privat",
             "name": "Privat",
             "parentId": null
         },
         {
-            "id": "6g77WqwQfqr2953w",
+            "id": "proj-arbeit",
+            "name": "Nebenjob",
+            "parentId": null
+        },
+        {
+            "id": "proj-uni",
             "name": "Uni",
             "parentId": null
         },
         {
-            "id": "6hqCjQJchpFP8V2W",
-            "name": "CC",
-            "parentId": "6g77WqwQfqr2953w"
+            "id": "proj-uni-mathe",
+            "name": "Mathe",
+            "parentId": "proj-uni"
         },
         {
-            "id": "6hpmV37xcrgWvWF6",
-            "name": "DuD",
-            "parentId": "6g77WqwQfqr2953w"
+            "id": "proj-uni-prog",
+            "name": "Programmieren",
+            "parentId": "proj-uni"
         },
         {
-            "id": "6hq3P8HgQxMpfW3c",
-            "name": "FED",
-            "parentId": "6g77WqwQfqr2953w"
+            "id": "proj-uni-db",
+            "name": "Datenbanken",
+            "parentId": "proj-uni"
         },
         {
-            "id": "6hqCqMjV9cjHh76X",
-            "name": "SA",
-            "parentId": "6g77WqwQfqr2953w"
-        },
-        {
-            "id": "6hq3669PQQxxXgWh",
-            "name": "VS",
-            "parentId": "6g77WqwQfqr2953w"
-        },
-        {
-            "id": "6Crfqv2MhCVcvrGh",
+            "id": "proj-inbox",
             "name": "Inbox",
             "parentId": null
         },
         {
-            "id": "6g7hHhQcwrg9j3mG",
+            "id": "proj-einkaufen",
             "name": "Einkaufen",
             "parentId": null
         },
         {
-            "id": "beispielHabits01",
+            "id": "proj-habits",
             "name": "Gewohnheiten",
             "parentId": null
         }
     ],
     "heute_faellig": [
         {
-            "id": "6hqxxGw5f85mVvpc",
-            "content": "Abschnitt 1+2: Einstieg und Was ist die TI?",
-            "projectId": "6hpmV37xcrgWvWF6",
-            "parentId": "6hqxr9J3v68F5hf6",
-            "dueDate": "2026-11-07",
+            "id": "task-001",
+            "content": "Übungsblatt 5 abgeben",
+            "projectId": "proj-uni-mathe",
+            "dueDate": "2026-11-08",
             "deadlineDate": "2026-11-10",
             "recurring": false,
             "priority": "p4",
@@ -77,166 +71,104 @@ export const daten: Daten = {
                 "urgent"
             ],
             "duration": "2h",
-            "addedAt": "2026-10-26T14:01:26.037Z"
+            "addedAt": "2026-10-27T08:00:00.000Z"
         },
         {
-            "id": "6hqx3HfMWPq7vcj9",
-            "content": "Einheit 3: Systemmodelle & Architekturstile",
-            "projectId": "6hq3669PQQxxXgWh",
-            "dueDate": "2026-11-10",
-            "deadlineDate": "2026-11-12",
-            "recurring": false,
-            "priority": "p4",
-            "labels": [],
-            "duration": "2h",
-            "addedAt": "2026-10-26T11:01:26.257Z"
-        },
-        {
-            "id": "6hr297WCh5F2f6M4",
-            "content": "Module 8/9 Knowledge Check",
-            "projectId": "6hqCjQJchpFP8V2W",
-            "parentId": "6hr2952CwQg447wW",
+            "id": "task-002",
+            "content": "Kapitel 4 nacharbeiten",
+            "projectId": "proj-uni-db",
             "dueDate": "2026-11-10",
             "deadlineDate": "2026-11-13",
             "recurring": false,
             "priority": "p4",
             "labels": [],
-            "addedAt": "2026-10-26T14:48:28.973Z"
+            "duration": "1h30m",
+            "addedAt": "2026-10-20T09:00:00.000Z"
         },
         {
-            "id": "6hvJ88MgcQr5p5fh",
-            "content": "Gewobag anrufen",
-            "projectId": "6WwHCXH4vPgcFXQx",
-            "dueDate": "2026-11-10T09:00:00",
-            "recurring": false,
-            "priority": "p4",
-            "labels": [],
-            "duration": "15m",
-            "addedAt": "2026-11-01T11:37:23.482Z"
-        },
-        {
-            "id": "6hvWCGHPf9CH4Qf9",
-            "content": "Kindergeld auf 450€ zurück stellen",
-            "projectId": "6WwHCXH4vPgcFXQx",
+            "id": "task-003",
+            "content": "Projektaufgabe: Klassen entwerfen",
+            "projectId": "proj-uni-prog",
+            "parentId": "task-004",
             "dueDate": "2026-11-10",
-            "recurring": false,
-            "priority": "p4",
-            "labels": [],
-            "addedAt": "2026-11-02T07:03:02.963Z"
-        },
-        {
-            "id": "6g7hx7MCj6q9q5xx",
-            "content": "Pflanzen gießen",
-            "projectId": "6WwHCXH4vPgcFXQx",
-            "dueDate": "2026-11-10",
-            "recurring": "alle 6 Tage",
-            "priority": "p4",
-            "labels": [],
-            "duration": "15m",
-            "addedAt": "2026-03-08T22:21:47.557Z"
-        },
-        {
-            "id": "6hv74C4j5X7vrJv5",
-            "content": "Ankikarten lernen",
-            "projectId": "6hqCqMjV9cjHh76X",
-            "dueDate": "2026-11-10T17:15:00",
-            "recurring": "every day ending 2027-01-29",
-            "priority": "p4",
-            "labels": [],
-            "duration": "30m",
-            "addedAt": "2026-10-31T12:48:36.067Z"
-        },
-        {
-            "id": "6hwcwJfWVfr99RCX",
-            "content": "Ankikarten lernen",
-            "projectId": "6hq3P8HgQxMpfW3c",
-            "dueDate": "2026-11-10T17:15:00",
-            "recurring": "every day ending 2027-01-29",
-            "priority": "p4",
-            "labels": [],
-            "duration": "30m",
-            "addedAt": "2026-11-06T22:08:49.166Z"
-        },
-        {
-            "id": "6hr2C4QCJmQ9v9r4",
-            "content": "Roadmap erstellen",
-            "projectId": "6hqCjQJchpFP8V2W",
-            "parentId": "6hqCrg5QF28c89m4",
-            "dueDate": "2026-11-07",
-            "deadlineDate": "2026-11-15",
-            "recurring": false,
-            "priority": "p3",
-            "labels": [],
-            "addedAt": "2026-10-26T14:53:54.057Z"
-        }
-    ],
-    "offen": [
-        {
-            "id": "6hqx3J3MPM6JX26h",
-            "content": "Beleg abgeben",
-            "projectId": "6hq3669PQQxxXgWh",
-            "dueDate": "2027-01-12",
-            "deadlineDate": "2027-01-14",
-            "recurring": false,
-            "priority": "p1",
-            "labels": [],
-            "duration": "9h",
-            "addedAt": "2026-10-26T11:01:30.342Z"
-        },
-        {
-            "id": "6hqx3HgmRpwfWhGh",
-            "content": "Einheit 4: Systemarchitekturen I: C/S",
-            "projectId": "6hq3669PQQxxXgWh",
             "deadlineDate": "2026-11-19",
             "recurring": false,
             "priority": "p4",
             "labels": [],
-            "duration": "2h",
-            "addedAt": "2026-10-26T11:01:26.635Z"
+            "addedAt": "2026-10-20T09:00:00.000Z"
         },
         {
-            "id": "6hqxxGvgHm3WMGJ6",
-            "content": "Abschnitt 3: Anwendungen",
-            "projectId": "6hpmV37xcrgWvWF6",
-            "parentId": "6hqxr9J3v68F5hf6",
-            "dueDate": "2026-11-11",
-            "deadlineDate": "2026-11-17",
+            "id": "task-007",
+            "content": "Zahnarzttermin vereinbaren",
+            "projectId": "proj-privat",
+            "dueDate": "2026-11-10T09:00:00",
+            "recurring": false,
+            "priority": "p4",
+            "labels": [],
+            "duration": "15m",
+            "addedAt": "2026-10-20T09:00:00.000Z"
+        },
+        {
+            "id": "task-008",
+            "content": "Wohnung aufräumen",
+            "projectId": "proj-privat",
+            "dueDate": "2026-11-10",
             "recurring": false,
             "priority": "p4",
             "labels": [],
             "duration": "1h",
-            "addedAt": "2026-10-26T14:01:26.362Z"
+            "addedAt": "2026-10-20T09:00:00.000Z"
         },
         {
-            "id": "6hr297fGVC44hx6W",
-            "content": "Lab 5: Build a Database Server",
-            "projectId": "6hqCjQJchpFP8V2W",
-            "parentId": "6hr2952CwQg447wW",
-            "dueDate": "2026-11-11",
-            "deadlineDate": "2026-11-13",
+            "id": "task-009",
+            "content": "Stundenzettel einreichen",
+            "projectId": "proj-arbeit",
+            "dueDate": "2026-11-10",
+            "deadlineDate": "2026-11-11",
             "recurring": false,
             "priority": "p4",
             "labels": [],
-            "addedAt": "2026-10-26T14:48:29.311Z"
+            "duration": "20m",
+            "addedAt": "2026-10-20T09:00:00.000Z"
         },
         {
-            "id": "6hr295Q8fqPrxj94",
-            "content": "ACD Module 13: CI/CD Pipelines",
-            "projectId": "6hqCjQJchpFP8V2W",
-            "dueDate": "2027-02-03",
-            "deadlineDate": "2027-02-05",
+            "id": "task-010",
+            "content": "Paket zur Post bringen",
+            "projectId": "proj-inbox",
+            "dueDate": "2026-11-09",
             "recurring": false,
             "priority": "p4",
             "labels": [],
-            "duration": "2h15m",
-            "addedAt": "2026-10-26T14:48:05.773Z"
+            "addedAt": "2026-10-20T09:00:00.000Z"
         },
         {
-            "id": "6hqxxGw5f85mVvpc",
-            "content": "Abschnitt 1+2: Einstieg und Was ist die TI?",
-            "projectId": "6hpmV37xcrgWvWF6",
-            "parentId": "6hqxr9J3v68F5hf6",
-            "dueDate": "2026-11-07",
+            "id": "task-012",
+            "content": "Hafermilch",
+            "projectId": "proj-einkaufen",
+            "dueDate": "2026-11-10",
+            "recurring": false,
+            "priority": "p4",
+            "labels": [],
+            "addedAt": "2026-10-20T09:00:00.000Z"
+        },
+        {
+            "id": "task-020",
+            "content": "Karteikarten wiederholen",
+            "projectId": "proj-uni-db",
+            "dueDate": "2026-11-10T18:00:00",
+            "recurring": "every day",
+            "priority": "p4",
+            "labels": [],
+            "duration": "30m",
+            "addedAt": "2026-10-05T10:00:00.000Z"
+        }
+    ],
+    "offen": [
+        {
+            "id": "task-001",
+            "content": "Übungsblatt 5 abgeben",
+            "projectId": "proj-uni-mathe",
+            "dueDate": "2026-11-08",
             "deadlineDate": "2026-11-10",
             "recurring": false,
             "priority": "p4",
@@ -244,246 +176,204 @@ export const daten: Daten = {
                 "urgent"
             ],
             "duration": "2h",
-            "addedAt": "2026-10-26T14:01:26.037Z"
+            "addedAt": "2026-10-27T08:00:00.000Z"
         },
         {
-            "id": "6hqxr9J3v68F5hf6",
-            "content": "Video Vortrag",
-            "projectId": "6hpmV37xcrgWvWF6",
-            "deadlineDate": "2027-01-10",
-            "recurring": false,
-            "priority": "p1",
-            "labels": [],
-            "addedAt": "2026-10-26T13:42:45.385Z"
-        },
-        {
-            "id": "6hqx3HfMWPq7vcj9",
-            "content": "Einheit 3: Systemmodelle & Architekturstile",
-            "projectId": "6hq3669PQQxxXgWh",
-            "dueDate": "2026-11-10",
-            "deadlineDate": "2026-11-12",
-            "recurring": false,
-            "priority": "p4",
-            "labels": [],
-            "duration": "2h",
-            "addedAt": "2026-10-26T11:01:26.257Z"
-        },
-        {
-            "id": "6hr297WCh5F2f6M4",
-            "content": "Module 8/9 Knowledge Check",
-            "projectId": "6hqCjQJchpFP8V2W",
-            "parentId": "6hr2952CwQg447wW",
+            "id": "task-002",
+            "content": "Kapitel 4 nacharbeiten",
+            "projectId": "proj-uni-db",
             "dueDate": "2026-11-10",
             "deadlineDate": "2026-11-13",
             "recurring": false,
             "priority": "p4",
             "labels": [],
-            "addedAt": "2026-10-26T14:48:28.973Z"
+            "duration": "1h30m",
+            "addedAt": "2026-10-20T09:00:00.000Z"
         },
         {
-            "id": "6hr2952CwQg447wW",
-            "content": "Module 8/9: Databases & Cloud Architecture",
-            "projectId": "6hqCjQJchpFP8V2W",
-            "dueDate": "2026-11-11",
-            "deadlineDate": "2026-11-13",
-            "recurring": false,
-            "priority": "p4",
-            "labels": [],
-            "duration": "2h15m",
-            "addedAt": "2026-10-26T14:47:59.126Z"
-        },
-        {
-            "id": "6hvJ88MgcQr5p5fh",
-            "content": "Gewobag anrufen",
-            "projectId": "6WwHCXH4vPgcFXQx",
-            "dueDate": "2026-11-10T09:00:00",
-            "recurring": false,
-            "priority": "p4",
-            "labels": [],
-            "duration": "15m",
-            "addedAt": "2026-11-01T11:37:23.482Z"
-        },
-        {
-            "id": "6hvWCGHPf9CH4Qf9",
-            "content": "Kindergeld auf 450€ zurück stellen",
-            "projectId": "6WwHCXH4vPgcFXQx",
+            "id": "task-003",
+            "content": "Projektaufgabe: Klassen entwerfen",
+            "projectId": "proj-uni-prog",
+            "parentId": "task-004",
             "dueDate": "2026-11-10",
+            "deadlineDate": "2026-11-19",
             "recurring": false,
             "priority": "p4",
             "labels": [],
-            "addedAt": "2026-11-02T07:03:02.963Z"
+            "addedAt": "2026-10-20T09:00:00.000Z"
         },
         {
-            "id": "6hr2C4QCJmQ9v9r4",
-            "content": "Roadmap erstellen",
-            "projectId": "6hqCjQJchpFP8V2W",
-            "parentId": "6hqCrg5QF28c89m4",
-            "dueDate": "2026-11-07",
-            "deadlineDate": "2026-11-15",
-            "recurring": false,
-            "priority": "p3",
-            "labels": [],
-            "addedAt": "2026-10-26T14:53:54.057Z"
-        },
-        {
-            "id": "6hqCrg5QF28c89m4",
-            "content": "Infografik",
-            "projectId": "6hqCjQJchpFP8V2W",
-            "dueDate": "2027-01-25",
-            "deadlineDate": "2027-01-29",
+            "id": "task-004",
+            "content": "Projektabgabe Programmieren",
+            "projectId": "proj-uni-prog",
+            "deadlineDate": "2026-11-19",
             "recurring": false,
             "priority": "p4",
             "labels": [],
-            "duration": "4h",
-            "addedAt": "2026-10-23T12:05:59.006Z"
+            "duration": "6h",
+            "addedAt": "2026-10-15T10:00:00.000Z"
         },
         {
-            "id": "6hmWGvW7PpFp3gM9",
-            "content": "Claude abbestellen?",
-            "projectId": "6WwHCXH4vPgcFXQx",
-            "dueDate": "2026-11-13",
+            "id": "task-005",
+            "content": "Projektaufgabe: Tests schreiben",
+            "projectId": "proj-uni-prog",
+            "parentId": "task-004",
+            "dueDate": "2026-11-12",
+            "deadlineDate": "2026-11-19",
             "recurring": false,
             "priority": "p4",
             "labels": [],
-            "addedAt": "2026-10-16T05:23:00.651Z"
+            "addedAt": "2026-10-20T09:00:00.000Z"
         },
         {
-            "id": "6hp5pf7739X9c829",
-            "content": "Mensakarte Bank wechseln",
-            "projectId": "6WwHCXH4vPgcFXQx",
-            "dueDate": "2026-11-13T12:45:00",
-            "recurring": false,
-            "priority": "p4",
-            "labels": [],
-            "duration": "30m",
-            "addedAt": "2026-10-18T13:24:07.726Z"
-        },
-        {
-            "id": "6hqwwRQQm2CMwpf5",
-            "content": "Einheit 4: Grundlegende Architekturmodelle und dahinter steckende Ideen (1)",
-            "projectId": "6hqCqMjV9cjHh76X",
-            "deadlineDate": "2026-11-20",
+            "id": "task-006",
+            "content": "Klausurvorbereitung Mathe",
+            "projectId": "proj-uni-mathe",
+            "deadlineDate": "2026-12-25",
             "recurring": false,
             "priority": "p4",
             "labels": [
                 "oldest"
             ],
-            "duration": "30m",
-            "addedAt": "2026-10-26T10:44:19.121Z"
-        },
-        {
-            "id": "6hrcq6HC47JVXW76",
-            "content": "Lecture 05 - React Intro, Props, Lists",
-            "projectId": "6hq3P8HgQxMpfW3c",
-            "deadlineDate": "2026-11-19",
-            "recurring": false,
-            "priority": "p4",
-            "labels": [],
-            "duration": "30m",
-            "addedAt": "2026-10-29T08:51:25.934Z"
-        },
-        {
-            "id": "6hr8R32pjh96C44c",
-            "content": "Project 2",
-            "projectId": "6hq3P8HgQxMpfW3c",
-            "dueDate": "2026-12-01",
-            "deadlineDate": "2026-12-03",
-            "recurring": false,
-            "priority": "p4",
-            "labels": [],
             "duration": "10h",
-            "addedAt": "2026-10-27T10:54:35.127Z"
+            "addedAt": "2026-10-01T10:00:00.000Z"
+        },
+        {
+            "id": "task-007",
+            "content": "Zahnarzttermin vereinbaren",
+            "projectId": "proj-privat",
+            "dueDate": "2026-11-10T09:00:00",
+            "recurring": false,
+            "priority": "p4",
+            "labels": [],
+            "duration": "15m",
+            "addedAt": "2026-10-20T09:00:00.000Z"
+        },
+        {
+            "id": "task-008",
+            "content": "Wohnung aufräumen",
+            "projectId": "proj-privat",
+            "dueDate": "2026-11-10",
+            "recurring": false,
+            "priority": "p4",
+            "labels": [],
+            "duration": "1h",
+            "addedAt": "2026-10-20T09:00:00.000Z"
+        },
+        {
+            "id": "task-009",
+            "content": "Stundenzettel einreichen",
+            "projectId": "proj-arbeit",
+            "dueDate": "2026-11-10",
+            "deadlineDate": "2026-11-11",
+            "recurring": false,
+            "priority": "p4",
+            "labels": [],
+            "duration": "20m",
+            "addedAt": "2026-10-20T09:00:00.000Z"
+        },
+        {
+            "id": "task-010",
+            "content": "Paket zur Post bringen",
+            "projectId": "proj-inbox",
+            "dueDate": "2026-11-09",
+            "recurring": false,
+            "priority": "p4",
+            "labels": [],
+            "addedAt": "2026-10-20T09:00:00.000Z"
+        },
+        {
+            "id": "task-011",
+            "content": "Geburtstagsgeschenk überlegen",
+            "projectId": "proj-privat",
+            "dueDate": "2026-11-14",
+            "deadlineDate": "2026-11-16",
+            "recurring": false,
+            "priority": "p4",
+            "labels": [],
+            "duration": "30m",
+            "addedAt": "2026-10-20T09:00:00.000Z"
+        },
+        {
+            "id": "task-012",
+            "content": "Hafermilch",
+            "projectId": "proj-einkaufen",
+            "dueDate": "2026-11-10",
+            "recurring": false,
+            "priority": "p4",
+            "labels": [],
+            "addedAt": "2026-10-20T09:00:00.000Z"
         }
     ],
     "uni": {
         "erledigt_woche": [
             {
-                "id": "6hwcrx4Chcvr5W29",
-                "zeit": "2026-11-09T10:31:00.000Z",
-                "projectId": "6hq3669PQQxxXgWh",
-                "content": "Projektarbeit",
-                "dauer_min": 120,
-                "parentId": "6hqx3J3MPM6JX26h",
-                "wiederkehrend": false
-            },
-            {
-                "id": "6hwcv22v2fGM62r9",
-                "zeit": "2026-11-09T12:35:00.000Z",
-                "projectId": "6hq3669PQQxxXgWh",
-                "content": "Projektarbeit",
-                "dauer_min": 120,
-                "parentId": "6hqx3J3MPM6JX26h",
-                "wiederkehrend": false
-            },
-            {
-                "id": "6hrcq6Hxwv8jfJJc",
-                "zeit": "2026-11-09T15:02:00.000Z",
-                "projectId": "6hq3P8HgQxMpfW3c",
-                "content": "Lecture 04 - React Intro",
-                "dauer_min": 30,
+                "id": "done-001",
+                "zeit": "2026-11-09T09:15:00.000Z",
+                "projectId": "proj-uni-db",
+                "content": "Vorlesung Datenbanken nacharbeiten",
+                "dauer_min": 90,
                 "parentId": null,
                 "wiederkehrend": false
             },
             {
-                "id": "6hv74C4j5X7vrJv5",
-                "zeit": "2026-11-09T16:40:00.000Z",
-                "projectId": "6hqCqMjV9cjHh76X",
-                "content": "Ankikarten lernen",
+                "id": "done-002",
+                "zeit": "2026-11-09T13:15:00.000Z",
+                "projectId": "proj-uni-prog",
+                "content": "Projektaufgabe: Anforderungen sammeln",
+                "dauer_min": null,
+                "parentId": "task-004",
+                "wiederkehrend": false
+            },
+            {
+                "id": "task-020",
+                "zeit": "2026-11-09T17:15:00.000Z",
+                "projectId": "proj-uni-db",
+                "content": "Karteikarten wiederholen",
                 "dauer_min": 30,
                 "parentId": null,
                 "wiederkehrend": true
             },
             {
-                "id": "6hwcwJfWVfr99RCX",
-                "zeit": "2026-11-09T16:55:00.000Z",
-                "projectId": "6hq3P8HgQxMpfW3c",
-                "content": "Ankikarten lernen",
-                "dauer_min": 30,
+                "id": "done-004",
+                "zeit": "2026-11-10T07:15:00.000Z",
+                "projectId": "proj-uni-mathe",
+                "content": "Übung Mathe vorbereiten",
+                "dauer_min": 60,
                 "parentId": null,
-                "wiederkehrend": true
+                "wiederkehrend": false
             },
             {
-                "id": "6hvJ88MgcQr5p5fh",
-                "zeit": "2026-11-09T09:00:00.000Z",
-                "projectId": "6WwHCXH4vPgcFXQx",
-                "content": "Wäsche waschen",
-                "dauer_min": 30,
+                "id": "done-005",
+                "zeit": "2026-11-10T08:15:00.000Z",
+                "projectId": "proj-einkaufen",
+                "content": "Einkauf erledigt",
+                "dauer_min": null,
                 "parentId": null,
                 "wiederkehrend": false
             }
         ],
         "wiederkehrend": [
             {
-                "id": "6hv74C4j5X7vrJv5",
-                "content": "Ankikarten lernen",
-                "projectId": "6hqCqMjV9cjHh76X",
-                "dueDate": "2026-11-10T17:15:00",
-                "recurring": "every day ending 2027-01-29",
+                "id": "task-020",
+                "content": "Karteikarten wiederholen",
+                "projectId": "proj-uni-db",
+                "dueDate": "2026-11-10T18:00:00",
+                "recurring": "every day",
                 "priority": "p4",
                 "labels": [],
                 "duration": "30m",
-                "addedAt": "2026-10-31T12:48:36.067Z"
-            },
-            {
-                "id": "6hwcwJfWVfr99RCX",
-                "content": "Ankikarten lernen",
-                "projectId": "6hq3P8HgQxMpfW3c",
-                "dueDate": "2026-11-10T17:15:00",
-                "recurring": "every day ending 2027-01-29",
-                "priority": "p4",
-                "labels": [],
-                "duration": "30m",
-                "addedAt": "2026-11-06T22:08:49.166Z"
+                "addedAt": "2026-10-05T10:00:00.000Z"
             }
         ]
     },
     "habits": {
-        "projekt_id": "beispielHabits01",
+        "projekt_id": "proj-habits",
         "aufgaben": [
             {
-                "id": "beispielHabit001",
+                "id": "task-101",
                 "content": "10 Minuten lesen",
-                "projectId": "beispielHabits01",
+                "projectId": "proj-habits",
                 "dueDate": "2026-11-10",
                 "recurring": "every day",
                 "priority": "p4",
@@ -491,9 +381,9 @@ export const daten: Daten = {
                 "addedAt": "2026-08-01T08:00:00.000Z"
             },
             {
-                "id": "beispielHabit002",
+                "id": "task-102",
                 "content": "Dehnen",
-                "projectId": "beispielHabits01",
+                "projectId": "proj-habits",
                 "dueDate": "2026-11-11",
                 "recurring": "jeden Mo, Mi, Fr",
                 "priority": "p4",
@@ -501,488 +391,480 @@ export const daten: Daten = {
                 "addedAt": "2026-08-01T08:00:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "content": "Tagebuch schreiben",
-                "projectId": "beispielHabits01",
-                "dueDate": "2026-11-10T21:30:00",
-                "recurring": "täglich",
+                "id": "task-103",
+                "content": "Spaziergang",
+                "projectId": "proj-habits",
+                "dueDate": "2026-11-10T17:00:00",
+                "recurring": "every weekday",
                 "priority": "p4",
                 "labels": [],
-                "addedAt": "2026-09-20T08:00:00.000Z"
+                "addedAt": "2026-09-15T08:00:00.000Z"
             }
         ],
         "erledigt": [
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-08-24T07:35:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-08-18T06:47:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-08-24T06:44:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-08-19T07:08:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-08-25T06:42:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-08-20T20:05:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-08-26T06:37:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-08-21T06:01:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-08-26T07:15:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-08-21T07:32:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-08-27T06:46:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-08-22T20:12:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-08-28T07:50:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-08-23T20:26:00.000Z"
             },
             {
-                "id": "beispielHabit002",
+                "id": "task-101",
+                "zeit": "2026-08-24T20:17:00.000Z"
+            },
+            {
+                "id": "task-101",
+                "zeit": "2026-08-25T07:44:00.000Z"
+            },
+            {
+                "id": "task-101",
+                "zeit": "2026-08-26T11:09:00.000Z"
+            },
+            {
+                "id": "task-102",
+                "zeit": "2026-08-26T11:06:00.000Z"
+            },
+            {
+                "id": "task-101",
+                "zeit": "2026-08-27T06:22:00.000Z"
+            },
+            {
+                "id": "task-102",
                 "zeit": "2026-08-28T06:46:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-08-29T06:24:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-08-29T06:59:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-08-30T07:28:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-08-30T20:18:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-08-31T06:46:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-08-31T11:36:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-08-31T07:16:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-01T06:02:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-01T07:33:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-02T11:05:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-02T06:46:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-04T17:40:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-09-02T07:41:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-05T11:13:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-03T09:59:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-06T06:38:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-04T09:33:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-07T20:46:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-09-04T07:54:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-09-07T17:24:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-06T08:43:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-08T20:14:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-07T08:56:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-09T06:14:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-09-07T06:17:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-11T06:13:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-08T07:58:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-12T11:13:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-09T09:36:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-13T17:56:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-09-09T06:58:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-09-14T11:08:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-10T08:31:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-15T20:34:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-11T09:47:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-09-15T20:27:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-12T06:27:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-09-16T07:08:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-13T06:13:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-09-16T06:48:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-14T08:51:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-17T06:09:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-09-14T09:28:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-09-17T17:38:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-15T08:11:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-18T17:38:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-09-16T06:41:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-09-18T20:55:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-17T08:18:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-20T06:43:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-18T09:35:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-22T11:27:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-19T07:38:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-09-22T06:46:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-20T08:18:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-09-23T20:48:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-09-21T09:32:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-09-23T06:55:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-22T07:19:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-24T20:38:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-09-22T07:24:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-09-24T11:48:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-23T06:41:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-25T20:58:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-09-23T08:10:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-09-25T11:31:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-24T08:49:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-09-25T11:56:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-09-25T06:39:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-28T07:56:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-09-27T09:35:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-09-28T06:05:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-28T09:13:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-09-30T07:08:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-09-28T07:38:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-09-30T20:10:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-09-28T08:48:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-09-30T20:27:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-29T06:46:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-10-02T11:25:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-09-29T06:33:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-03T17:57:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-09-30T06:23:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-04T06:15:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-09-30T07:50:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-05T11:01:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-09-30T08:48:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-10-05T07:37:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-01T06:17:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-10-05T06:45:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-10-02T09:29:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-06T07:04:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-10-02T06:57:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-10-07T07:17:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-03T08:40:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-10-07T07:34:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-04T06:23:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-08T20:36:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-05T07:54:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-10-08T17:51:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-10-05T06:58:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-09T06:06:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-10-05T06:54:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-10-09T11:27:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-10-06T07:32:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-10-09T06:43:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-10-07T08:50:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-10T06:03:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-10-07T07:25:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-11T11:51:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-09T09:32:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-10-12T07:34:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-10-10T07:54:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-10-12T17:11:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-11T08:38:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-13T07:55:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-12T08:33:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-14T20:06:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-10-12T06:24:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-10-14T20:53:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-10-12T08:23:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-10-14T06:59:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-13T06:40:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-10-15T17:31:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-14T06:52:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-16T17:57:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-10-14T09:55:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-10-16T17:00:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-15T07:37:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-17T17:18:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-16T09:39:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-18T20:42:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-10-16T06:56:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-19T07:12:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-10-16T07:11:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-10-19T06:37:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-17T09:51:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-20T11:03:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-10-17T09:52:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-10-20T17:32:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-10-18T07:11:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-10-21T06:32:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-19T06:43:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-10-21T07:04:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-10-19T07:23:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-22T07:25:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-20T07:28:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-10-22T20:15:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-10-20T08:26:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-23T06:39:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-21T07:13:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-10-23T20:36:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-10-21T09:52:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-10-23T11:13:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-22T09:42:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-24T11:15:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-10-22T07:43:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-25T07:42:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-23T09:59:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-26T17:20:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-10-23T06:59:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-27T20:36:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-24T09:49:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-28T07:32:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-25T08:53:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-10-28T11:56:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-10-25T09:59:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-10-28T07:23:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-26T06:25:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-10-29T17:53:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-10-26T06:59:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-10-29T11:39:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-10-26T09:45:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-10-30T20:19:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-27T06:38:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-11-01T07:16:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-10-27T07:54:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-11-02T06:47:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-28T09:42:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-11-02T11:18:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-30T07:38:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-11-02T11:13:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-10-30T06:35:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-11-03T11:32:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-10-30T06:52:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-11-03T06:05:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-10-31T06:23:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-11-04T11:02:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-11-02T08:19:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-11-04T07:40:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-11-02T07:39:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-11-05T17:35:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-11-02T06:35:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-11-05T20:00:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-11-03T07:20:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-11-06T07:34:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-11-04T09:31:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-11-06T11:37:00.000Z"
             },
             {
-                "id": "beispielHabit002",
-                "zeit": "2026-11-04T08:30:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-11-06T17:08:00.000Z"
             },
             {
-                "id": "beispielHabit003",
-                "zeit": "2026-11-04T08:11:00.000Z"
+                "id": "task-101",
+                "zeit": "2026-11-07T11:57:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-11-05T09:38:00.000Z"
+                "id": "task-102",
+                "zeit": "2026-11-09T11:13:00.000Z"
             },
             {
-                "id": "beispielHabit001",
-                "zeit": "2026-11-06T08:42:00.000Z"
-            },
-            {
-                "id": "beispielHabit003",
-                "zeit": "2026-11-06T07:16:00.000Z"
-            },
-            {
-                "id": "beispielHabit001",
-                "zeit": "2026-11-07T08:12:00.000Z"
-            },
-            {
-                "id": "beispielHabit001",
-                "zeit": "2026-11-08T07:37:00.000Z"
-            },
-            {
-                "id": "beispielHabit001",
-                "zeit": "2026-11-09T08:35:00.000Z"
-            },
-            {
-                "id": "beispielHabit002",
-                "zeit": "2026-11-09T09:54:00.000Z"
-            },
-            {
-                "id": "beispielHabit003",
-                "zeit": "2026-11-09T08:13:00.000Z"
-            },
-            {
-                "id": "beispielHabit001",
-                "zeit": "2026-11-10T05:31:00.000Z"
+                "id": "task-103",
+                "zeit": "2026-11-09T06:22:00.000Z"
             }
         ]
     },
@@ -990,352 +872,952 @@ export const daten: Daten = {
         "verlauf": {
             "hrv": [
                 {
-                    "datum": "2026-10-01",
-                    "wert": 68.1
+                    "datum": "2026-08-12",
+                    "wert": 63.5
                 },
                 {
-                    "datum": "2026-10-02",
-                    "wert": 69.8
+                    "datum": "2026-08-13",
+                    "wert": 67.8
                 },
                 {
-                    "datum": "2026-10-03",
-                    "wert": 54.2
+                    "datum": "2026-08-14",
+                    "wert": 66.3
                 },
                 {
-                    "datum": "2026-10-04",
-                    "wert": 84.8
+                    "datum": "2026-08-15",
+                    "wert": 59.0
                 },
                 {
-                    "datum": "2026-10-05",
-                    "wert": 77.3
+                    "datum": "2026-08-16",
+                    "wert": 65.1
                 },
                 {
-                    "datum": "2026-10-06",
-                    "wert": 69.0
+                    "datum": "2026-08-17",
+                    "wert": 69.5
                 },
                 {
-                    "datum": "2026-10-07",
-                    "wert": 79.2
+                    "datum": "2026-08-18",
+                    "wert": 60.6
                 },
                 {
-                    "datum": "2026-10-08",
-                    "wert": 78.6
+                    "datum": "2026-08-19",
+                    "wert": 66.3
                 },
                 {
-                    "datum": "2026-10-09",
-                    "wert": 70.8
+                    "datum": "2026-08-20",
+                    "wert": 66.5
                 },
                 {
-                    "datum": "2026-10-10",
-                    "wert": 106.6
+                    "datum": "2026-08-21",
+                    "wert": 67.7
                 },
                 {
-                    "datum": "2026-10-11",
-                    "wert": 78.2
-                },
-                {
-                    "datum": "2026-10-12",
-                    "wert": 57.5
-                },
-                {
-                    "datum": "2026-10-13",
-                    "wert": 57.0
-                },
-                {
-                    "datum": "2026-10-14",
-                    "wert": 67.2
-                },
-                {
-                    "datum": "2026-10-15",
-                    "wert": 55.3
-                },
-                {
-                    "datum": "2026-10-16",
+                    "datum": "2026-08-22",
                     "wert": 64.6
                 },
                 {
-                    "datum": "2026-10-17",
-                    "wert": 52.7
+                    "datum": "2026-08-23",
+                    "wert": 64.7
                 },
                 {
-                    "datum": "2026-10-18",
-                    "wert": 82.8
+                    "datum": "2026-08-24",
+                    "wert": 56.8
                 },
                 {
-                    "datum": "2026-10-19",
+                    "datum": "2026-08-25",
+                    "wert": 59.4
+                },
+                {
+                    "datum": "2026-08-26",
+                    "wert": 52.4
+                },
+                {
+                    "datum": "2026-08-27",
+                    "wert": 56.6
+                },
+                {
+                    "datum": "2026-08-28",
+                    "wert": 53.6
+                },
+                {
+                    "datum": "2026-08-29",
+                    "wert": 54.2
+                },
+                {
+                    "datum": "2026-08-30",
+                    "wert": 57.7
+                },
+                {
+                    "datum": "2026-08-31",
+                    "wert": 58.5
+                },
+                {
+                    "datum": "2026-09-01",
+                    "wert": 56.6
+                },
+                {
+                    "datum": "2026-09-02",
+                    "wert": 50.2
+                },
+                {
+                    "datum": "2026-09-03",
+                    "wert": 43.9
+                },
+                {
+                    "datum": "2026-09-04",
+                    "wert": 56.2
+                },
+                {
+                    "datum": "2026-09-05",
+                    "wert": 54.8
+                },
+                {
+                    "datum": "2026-09-06",
+                    "wert": 52.4
+                },
+                {
+                    "datum": "2026-09-07",
+                    "wert": 53.2
+                },
+                {
+                    "datum": "2026-09-08",
+                    "wert": 54.8
+                },
+                {
+                    "datum": "2026-09-09",
+                    "wert": 53.0
+                },
+                {
+                    "datum": "2026-09-10",
+                    "wert": 57.2
+                },
+                {
+                    "datum": "2026-09-11",
                     "wert": 53.5
                 },
                 {
+                    "datum": "2026-09-12",
+                    "wert": 48.7
+                },
+                {
+                    "datum": "2026-09-13",
+                    "wert": 48.5
+                },
+                {
+                    "datum": "2026-09-14",
+                    "wert": 56.6
+                },
+                {
+                    "datum": "2026-09-15",
+                    "wert": 63.8
+                },
+                {
+                    "datum": "2026-09-16",
+                    "wert": 59.6
+                },
+                {
+                    "datum": "2026-09-17",
+                    "wert": 58.2
+                },
+                {
+                    "datum": "2026-09-18",
+                    "wert": 60.9
+                },
+                {
+                    "datum": "2026-09-19",
+                    "wert": 62.8
+                },
+                {
+                    "datum": "2026-09-20",
+                    "wert": 58.6
+                },
+                {
+                    "datum": "2026-09-21",
+                    "wert": 55.7
+                },
+                {
+                    "datum": "2026-09-22",
+                    "wert": 67.9
+                },
+                {
+                    "datum": "2026-09-23",
+                    "wert": 59.9
+                },
+                {
+                    "datum": "2026-09-24",
+                    "wert": 58.2
+                },
+                {
+                    "datum": "2026-09-25",
+                    "wert": 64.4
+                },
+                {
+                    "datum": "2026-09-26",
+                    "wert": 60.5
+                },
+                {
+                    "datum": "2026-09-27",
+                    "wert": 61.2
+                },
+                {
+                    "datum": "2026-09-28",
+                    "wert": 58.6
+                },
+                {
+                    "datum": "2026-09-29",
+                    "wert": 64.9
+                },
+                {
+                    "datum": "2026-09-30",
+                    "wert": 62.0
+                },
+                {
+                    "datum": "2026-10-01",
+                    "wert": 60.3
+                },
+                {
+                    "datum": "2026-10-02",
+                    "wert": 59.3
+                },
+                {
+                    "datum": "2026-10-03",
+                    "wert": 67.4
+                },
+                {
+                    "datum": "2026-10-04",
+                    "wert": 57.4
+                },
+                {
+                    "datum": "2026-10-05",
+                    "wert": 54.4
+                },
+                {
+                    "datum": "2026-10-06",
+                    "wert": 55.2
+                },
+                {
+                    "datum": "2026-10-07",
+                    "wert": 53.2
+                },
+                {
+                    "datum": "2026-10-08",
+                    "wert": 45.7
+                },
+                {
+                    "datum": "2026-10-09",
+                    "wert": 46.4
+                },
+                {
+                    "datum": "2026-10-10",
+                    "wert": 54.1
+                },
+                {
+                    "datum": "2026-10-11",
+                    "wert": 49.3
+                },
+                {
+                    "datum": "2026-10-12",
+                    "wert": 56.8
+                },
+                {
+                    "datum": "2026-10-13",
+                    "wert": 51.6
+                },
+                {
+                    "datum": "2026-10-14",
+                    "wert": 48.7
+                },
+                {
+                    "datum": "2026-10-15",
+                    "wert": 53.9
+                },
+                {
+                    "datum": "2026-10-16",
+                    "wert": 46.2
+                },
+                {
+                    "datum": "2026-10-17",
+                    "wert": 55.9
+                },
+                {
+                    "datum": "2026-10-18",
+                    "wert": 57.1
+                },
+                {
+                    "datum": "2026-10-19",
+                    "wert": 49.6
+                },
+                {
                     "datum": "2026-10-20",
-                    "wert": 89.2
+                    "wert": 53.8
                 },
                 {
                     "datum": "2026-10-21",
-                    "wert": 82.4
+                    "wert": 55.9
                 },
                 {
                     "datum": "2026-10-22",
-                    "wert": 85.9
-                },
-                {
-                    "datum": "2026-10-23",
                     "wert": 55.3
                 },
                 {
+                    "datum": "2026-10-23",
+                    "wert": 56.1
+                },
+                {
                     "datum": "2026-10-24",
-                    "wert": 87.1
+                    "wert": 59.1
                 },
                 {
                     "datum": "2026-10-25",
-                    "wert": 69.2
+                    "wert": 58.9
                 },
                 {
                     "datum": "2026-10-26",
-                    "wert": 102.2
+                    "wert": 55.7
                 },
                 {
                     "datum": "2026-10-27",
-                    "wert": 76.9
+                    "wert": 61.9
                 },
                 {
                     "datum": "2026-10-28",
-                    "wert": 77.2
+                    "wert": 66.6
                 },
                 {
                     "datum": "2026-10-29",
-                    "wert": 61.7
+                    "wert": 64.4
                 },
                 {
                     "datum": "2026-10-30",
-                    "wert": 71.9
+                    "wert": 60.6
                 },
                 {
                     "datum": "2026-10-31",
-                    "wert": 58.7
+                    "wert": 64.3
                 },
                 {
                     "datum": "2026-11-01",
-                    "wert": 74.6
+                    "wert": 62.3
                 },
                 {
                     "datum": "2026-11-02",
-                    "wert": 84.7
+                    "wert": 69.5
                 },
                 {
                     "datum": "2026-11-03",
-                    "wert": 79.5
+                    "wert": 59.5
                 },
                 {
                     "datum": "2026-11-04",
-                    "wert": 77.9
-                },
-                {
-                    "datum": "2026-11-05",
-                    "wert": 82.9
-                },
-                {
-                    "datum": "2026-11-06",
-                    "wert": 69.7
-                },
-                {
-                    "datum": "2026-11-07",
-                    "wert": 53.7
-                },
-                {
-                    "datum": "2026-11-08",
-                    "wert": 72.5
-                },
-                {
-                    "datum": "2026-11-09",
                     "wert": 72.1
                 },
                 {
+                    "datum": "2026-11-05",
+                    "wert": 61.2
+                },
+                {
+                    "datum": "2026-11-06",
+                    "wert": 64.8
+                },
+                {
+                    "datum": "2026-11-07",
+                    "wert": 65.9
+                },
+                {
+                    "datum": "2026-11-08",
+                    "wert": 60.6
+                },
+                {
+                    "datum": "2026-11-09",
+                    "wert": 55.4
+                },
+                {
                     "datum": "2026-11-10",
-                    "wert": 64.0
+                    "wert": 52.4
                 }
             ],
             "ruhepuls": [
                 {
+                    "datum": "2026-08-12",
+                    "wert": 57
+                },
+                {
+                    "datum": "2026-08-13",
+                    "wert": 61
+                },
+                {
+                    "datum": "2026-08-14",
+                    "wert": 56
+                },
+                {
+                    "datum": "2026-08-15",
+                    "wert": 61
+                },
+                {
+                    "datum": "2026-08-16",
+                    "wert": 58
+                },
+                {
+                    "datum": "2026-08-17",
+                    "wert": 57
+                },
+                {
+                    "datum": "2026-08-18",
+                    "wert": 59
+                },
+                {
+                    "datum": "2026-08-19",
+                    "wert": 59
+                },
+                {
+                    "datum": "2026-08-20",
+                    "wert": 58
+                },
+                {
+                    "datum": "2026-08-21",
+                    "wert": 59
+                },
+                {
+                    "datum": "2026-08-22",
+                    "wert": 59
+                },
+                {
+                    "datum": "2026-08-23",
+                    "wert": 60
+                },
+                {
+                    "datum": "2026-08-24",
+                    "wert": 58
+                },
+                {
+                    "datum": "2026-08-25",
+                    "wert": 61
+                },
+                {
+                    "datum": "2026-08-26",
+                    "wert": 59
+                },
+                {
+                    "datum": "2026-08-27",
+                    "wert": 60
+                },
+                {
+                    "datum": "2026-08-28",
+                    "wert": 62
+                },
+                {
+                    "datum": "2026-08-29",
+                    "wert": 62
+                },
+                {
+                    "datum": "2026-08-30",
+                    "wert": 62
+                },
+                {
+                    "datum": "2026-08-31",
+                    "wert": 60
+                },
+                {
+                    "datum": "2026-09-01",
+                    "wert": 61
+                },
+                {
+                    "datum": "2026-09-02",
+                    "wert": 60
+                },
+                {
+                    "datum": "2026-09-03",
+                    "wert": 62
+                },
+                {
+                    "datum": "2026-09-04",
+                    "wert": 62
+                },
+                {
+                    "datum": "2026-09-05",
+                    "wert": 60
+                },
+                {
+                    "datum": "2026-09-06",
+                    "wert": 62
+                },
+                {
+                    "datum": "2026-09-07",
+                    "wert": 61
+                },
+                {
+                    "datum": "2026-09-08",
+                    "wert": 63
+                },
+                {
+                    "datum": "2026-09-09",
+                    "wert": 61
+                },
+                {
+                    "datum": "2026-09-10",
+                    "wert": 62
+                },
+                {
+                    "datum": "2026-09-11",
+                    "wert": 61
+                },
+                {
+                    "datum": "2026-09-12",
+                    "wert": 61
+                },
+                {
+                    "datum": "2026-09-13",
+                    "wert": 59
+                },
+                {
+                    "datum": "2026-09-14",
+                    "wert": 59
+                },
+                {
+                    "datum": "2026-09-15",
+                    "wert": 59
+                },
+                {
+                    "datum": "2026-09-16",
+                    "wert": 61
+                },
+                {
+                    "datum": "2026-09-17",
+                    "wert": 59
+                },
+                {
+                    "datum": "2026-09-18",
+                    "wert": 60
+                },
+                {
+                    "datum": "2026-09-19",
+                    "wert": 61
+                },
+                {
+                    "datum": "2026-09-20",
+                    "wert": 60
+                },
+                {
+                    "datum": "2026-09-21",
+                    "wert": 60
+                },
+                {
+                    "datum": "2026-09-22",
+                    "wert": 57
+                },
+                {
+                    "datum": "2026-09-23",
+                    "wert": 60
+                },
+                {
+                    "datum": "2026-09-24",
+                    "wert": 59
+                },
+                {
+                    "datum": "2026-09-25",
+                    "wert": 59
+                },
+                {
+                    "datum": "2026-09-26",
+                    "wert": 60
+                },
+                {
+                    "datum": "2026-09-27",
+                    "wert": 59
+                },
+                {
+                    "datum": "2026-09-28",
+                    "wert": 60
+                },
+                {
+                    "datum": "2026-09-29",
+                    "wert": 60
+                },
+                {
+                    "datum": "2026-09-30",
+                    "wert": 60
+                },
+                {
                     "datum": "2026-10-01",
-                    "wert": 59.0
+                    "wert": 57
                 },
                 {
                     "datum": "2026-10-02",
-                    "wert": 58.0
+                    "wert": 59
                 },
                 {
                     "datum": "2026-10-03",
-                    "wert": 54.0
+                    "wert": 61
                 },
                 {
                     "datum": "2026-10-04",
-                    "wert": 55.0
+                    "wert": 62
                 },
                 {
                     "datum": "2026-10-05",
-                    "wert": 55.0
+                    "wert": 61
                 },
                 {
                     "datum": "2026-10-06",
-                    "wert": 58.0
+                    "wert": 62
                 },
                 {
                     "datum": "2026-10-07",
-                    "wert": 54.0
+                    "wert": 59
                 },
                 {
                     "datum": "2026-10-08",
-                    "wert": 57.0
+                    "wert": 60
                 },
                 {
                     "datum": "2026-10-09",
-                    "wert": 58.0
+                    "wert": 63
                 },
                 {
                     "datum": "2026-10-10",
-                    "wert": 55.0
+                    "wert": 61
                 },
                 {
                     "datum": "2026-10-11",
-                    "wert": 56.0
+                    "wert": 59
                 },
                 {
                     "datum": "2026-10-12",
-                    "wert": 60.0
+                    "wert": 62
                 },
                 {
                     "datum": "2026-10-13",
-                    "wert": 54.0
+                    "wert": 61
                 },
                 {
                     "datum": "2026-10-14",
-                    "wert": 57.0
+                    "wert": 62
                 },
                 {
                     "datum": "2026-10-15",
-                    "wert": 54.0
+                    "wert": 62
                 },
                 {
                     "datum": "2026-10-16",
-                    "wert": 59.0
+                    "wert": 59
                 },
                 {
                     "datum": "2026-10-17",
-                    "wert": 55.0
+                    "wert": 60
                 },
                 {
                     "datum": "2026-10-18",
-                    "wert": 55.0
+                    "wert": 61
                 },
                 {
                     "datum": "2026-10-19",
-                    "wert": 54.0
+                    "wert": 60
                 },
                 {
                     "datum": "2026-10-20",
-                    "wert": 57.0
+                    "wert": 62
                 },
                 {
                     "datum": "2026-10-21",
-                    "wert": 55.0
+                    "wert": 62
                 },
                 {
                     "datum": "2026-10-22",
-                    "wert": 56.0
+                    "wert": 60
                 },
                 {
                     "datum": "2026-10-23",
-                    "wert": 58.0
+                    "wert": 59
                 },
                 {
                     "datum": "2026-10-24",
-                    "wert": 60.0
+                    "wert": 60
                 },
                 {
                     "datum": "2026-10-25",
-                    "wert": 57.0
+                    "wert": 61
                 },
                 {
                     "datum": "2026-10-26",
-                    "wert": 54.0
+                    "wert": 60
                 },
                 {
                     "datum": "2026-10-27",
-                    "wert": 58.0
+                    "wert": 60
                 },
                 {
                     "datum": "2026-10-28",
-                    "wert": 55.0
+                    "wert": 60
                 },
                 {
                     "datum": "2026-10-29",
-                    "wert": 56.0
+                    "wert": 60
                 },
                 {
                     "datum": "2026-10-30",
-                    "wert": 54.0
+                    "wert": 58
                 },
                 {
                     "datum": "2026-10-31",
-                    "wert": 56.0
+                    "wert": 59
                 },
                 {
                     "datum": "2026-11-01",
-                    "wert": 58.0
+                    "wert": 62
                 },
                 {
                     "datum": "2026-11-02",
-                    "wert": 59.0
+                    "wert": 60
                 },
                 {
                     "datum": "2026-11-03",
-                    "wert": 56.0
+                    "wert": 58
                 },
                 {
                     "datum": "2026-11-04",
-                    "wert": 56.0
+                    "wert": 60
                 },
                 {
                     "datum": "2026-11-05",
-                    "wert": 58.0
+                    "wert": 59
                 },
                 {
                     "datum": "2026-11-06",
-                    "wert": 54.0
+                    "wert": 60
                 },
                 {
                     "datum": "2026-11-07",
-                    "wert": 56.0
+                    "wert": 61
                 },
                 {
                     "datum": "2026-11-08",
-                    "wert": 57.0
+                    "wert": 58
                 },
                 {
                     "datum": "2026-11-09",
-                    "wert": 60.0
+                    "wert": 59
                 },
                 {
                     "datum": "2026-11-10",
-                    "wert": 59.0
+                    "wert": 62
                 }
             ],
             "atemfrequenz": [
                 {
-                    "datum": "2026-10-01",
+                    "datum": "2026-08-12",
+                    "wert": 13.7
+                },
+                {
+                    "datum": "2026-08-13",
+                    "wert": 14.5
+                },
+                {
+                    "datum": "2026-08-14",
+                    "wert": 14.4
+                },
+                {
+                    "datum": "2026-08-15",
                     "wert": 14.2
                 },
                 {
-                    "datum": "2026-10-02",
+                    "datum": "2026-08-16",
+                    "wert": 14.0
+                },
+                {
+                    "datum": "2026-08-17",
+                    "wert": 14.1
+                },
+                {
+                    "datum": "2026-08-18",
+                    "wert": 14.1
+                },
+                {
+                    "datum": "2026-08-19",
                     "wert": 13.8
                 },
                 {
-                    "datum": "2026-10-03",
+                    "datum": "2026-08-20",
+                    "wert": 13.8
+                },
+                {
+                    "datum": "2026-08-21",
+                    "wert": 14.1
+                },
+                {
+                    "datum": "2026-08-22",
+                    "wert": 14.2
+                },
+                {
+                    "datum": "2026-08-23",
+                    "wert": 14.0
+                },
+                {
+                    "datum": "2026-08-24",
+                    "wert": 13.8
+                },
+                {
+                    "datum": "2026-08-25",
+                    "wert": 14.6
+                },
+                {
+                    "datum": "2026-08-26",
+                    "wert": 14.0
+                },
+                {
+                    "datum": "2026-08-27",
+                    "wert": 13.9
+                },
+                {
+                    "datum": "2026-08-28",
+                    "wert": 14.0
+                },
+                {
+                    "datum": "2026-08-29",
+                    "wert": 13.8
+                },
+                {
+                    "datum": "2026-08-30",
+                    "wert": 14.3
+                },
+                {
+                    "datum": "2026-08-31",
+                    "wert": 13.9
+                },
+                {
+                    "datum": "2026-09-01",
+                    "wert": 13.7
+                },
+                {
+                    "datum": "2026-09-02",
+                    "wert": 13.8
+                },
+                {
+                    "datum": "2026-09-03",
+                    "wert": 14.0
+                },
+                {
+                    "datum": "2026-09-04",
+                    "wert": 13.8
+                },
+                {
+                    "datum": "2026-09-05",
+                    "wert": 13.9
+                },
+                {
+                    "datum": "2026-09-06",
+                    "wert": 14.0
+                },
+                {
+                    "datum": "2026-09-07",
+                    "wert": 13.7
+                },
+                {
+                    "datum": "2026-09-08",
+                    "wert": 13.8
+                },
+                {
+                    "datum": "2026-09-09",
+                    "wert": 14.0
+                },
+                {
+                    "datum": "2026-09-10",
+                    "wert": 14.3
+                },
+                {
+                    "datum": "2026-09-11",
+                    "wert": 14.0
+                },
+                {
+                    "datum": "2026-09-12",
                     "wert": 13.6
                 },
                 {
-                    "datum": "2026-10-04",
+                    "datum": "2026-09-13",
+                    "wert": 14.3
+                },
+                {
+                    "datum": "2026-09-14",
+                    "wert": 14.2
+                },
+                {
+                    "datum": "2026-09-15",
+                    "wert": 13.8
+                },
+                {
+                    "datum": "2026-09-16",
                     "wert": 14.0
+                },
+                {
+                    "datum": "2026-09-17",
+                    "wert": 14.2
+                },
+                {
+                    "datum": "2026-09-18",
+                    "wert": 13.9
+                },
+                {
+                    "datum": "2026-09-19",
+                    "wert": 14.0
+                },
+                {
+                    "datum": "2026-09-20",
+                    "wert": 13.9
+                },
+                {
+                    "datum": "2026-09-21",
+                    "wert": 13.7
+                },
+                {
+                    "datum": "2026-09-22",
+                    "wert": 14.0
+                },
+                {
+                    "datum": "2026-09-23",
+                    "wert": 14.4
+                },
+                {
+                    "datum": "2026-09-24",
+                    "wert": 13.7
+                },
+                {
+                    "datum": "2026-09-25",
+                    "wert": 13.9
+                },
+                {
+                    "datum": "2026-09-26",
+                    "wert": 13.9
+                },
+                {
+                    "datum": "2026-09-27",
+                    "wert": 14.0
+                },
+                {
+                    "datum": "2026-09-28",
+                    "wert": 14.4
+                },
+                {
+                    "datum": "2026-09-29",
+                    "wert": 14.2
+                },
+                {
+                    "datum": "2026-09-30",
+                    "wert": 14.0
+                },
+                {
+                    "datum": "2026-10-01",
+                    "wert": 14.0
+                },
+                {
+                    "datum": "2026-10-02",
+                    "wert": 14.2
+                },
+                {
+                    "datum": "2026-10-03",
+                    "wert": 14.1
+                },
+                {
+                    "datum": "2026-10-04",
+                    "wert": 13.9
                 },
                 {
                     "datum": "2026-10-05",
@@ -1343,31 +1825,31 @@ export const daten: Daten = {
                 },
                 {
                     "datum": "2026-10-06",
-                    "wert": 13.8
+                    "wert": 13.5
                 },
                 {
                     "datum": "2026-10-07",
-                    "wert": 13.2
+                    "wert": 14.1
                 },
                 {
                     "datum": "2026-10-08",
-                    "wert": 13.4
+                    "wert": 13.5
                 },
                 {
                     "datum": "2026-10-09",
-                    "wert": 13.9
+                    "wert": 14.1
                 },
                 {
                     "datum": "2026-10-10",
-                    "wert": 13.4
+                    "wert": 13.9
                 },
                 {
                     "datum": "2026-10-11",
-                    "wert": 13.6
+                    "wert": 14.1
                 },
                 {
                     "datum": "2026-10-12",
-                    "wert": 13.3
+                    "wert": 14.0
                 },
                 {
                     "datum": "2026-10-13",
@@ -1375,23 +1857,23 @@ export const daten: Daten = {
                 },
                 {
                     "datum": "2026-10-14",
-                    "wert": 13.6
+                    "wert": 14.2
                 },
                 {
                     "datum": "2026-10-15",
-                    "wert": 14.1
+                    "wert": 13.6
                 },
                 {
                     "datum": "2026-10-16",
-                    "wert": 13.8
+                    "wert": 14.0
                 },
                 {
                     "datum": "2026-10-17",
-                    "wert": 13.3
+                    "wert": 13.9
                 },
                 {
                     "datum": "2026-10-18",
-                    "wert": 13.3
+                    "wert": 13.6
                 },
                 {
                     "datum": "2026-10-19",
@@ -1403,67 +1885,67 @@ export const daten: Daten = {
                 },
                 {
                     "datum": "2026-10-21",
-                    "wert": 13.7
+                    "wert": 14.2
                 },
                 {
                     "datum": "2026-10-22",
-                    "wert": 13.8
-                },
-                {
-                    "datum": "2026-10-23",
-                    "wert": 12.8
-                },
-                {
-                    "datum": "2026-10-24",
-                    "wert": 13.2
-                },
-                {
-                    "datum": "2026-10-25",
-                    "wert": 13.5
-                },
-                {
-                    "datum": "2026-10-26",
-                    "wert": 13.5
-                },
-                {
-                    "datum": "2026-10-27",
-                    "wert": 13.7
-                },
-                {
-                    "datum": "2026-10-28",
-                    "wert": 13.7
-                },
-                {
-                    "datum": "2026-10-29",
-                    "wert": 13.3
-                },
-                {
-                    "datum": "2026-10-30",
-                    "wert": 13.4
-                },
-                {
-                    "datum": "2026-10-31",
-                    "wert": 13.1
-                },
-                {
-                    "datum": "2026-11-01",
-                    "wert": 13.7
-                },
-                {
-                    "datum": "2026-11-02",
                     "wert": 14.0
                 },
                 {
+                    "datum": "2026-10-23",
+                    "wert": 13.6
+                },
+                {
+                    "datum": "2026-10-24",
+                    "wert": 13.9
+                },
+                {
+                    "datum": "2026-10-25",
+                    "wert": 13.7
+                },
+                {
+                    "datum": "2026-10-26",
+                    "wert": 13.8
+                },
+                {
+                    "datum": "2026-10-27",
+                    "wert": 14.1
+                },
+                {
+                    "datum": "2026-10-28",
+                    "wert": 14.0
+                },
+                {
+                    "datum": "2026-10-29",
+                    "wert": 13.9
+                },
+                {
+                    "datum": "2026-10-30",
+                    "wert": 14.1
+                },
+                {
+                    "datum": "2026-10-31",
+                    "wert": 14.3
+                },
+                {
+                    "datum": "2026-11-01",
+                    "wert": 13.6
+                },
+                {
+                    "datum": "2026-11-02",
+                    "wert": 13.5
+                },
+                {
                     "datum": "2026-11-03",
-                    "wert": 13.2
+                    "wert": 13.9
                 },
                 {
                     "datum": "2026-11-04",
-                    "wert": 13.3
+                    "wert": 13.5
                 },
                 {
                     "datum": "2026-11-05",
-                    "wert": 13.2
+                    "wert": 13.9
                 },
                 {
                     "datum": "2026-11-06",
@@ -1471,189 +1953,397 @@ export const daten: Daten = {
                 },
                 {
                     "datum": "2026-11-07",
-                    "wert": 13.2
+                    "wert": 13.7
                 },
                 {
                     "datum": "2026-11-08",
-                    "wert": 13.1
+                    "wert": 14.2
                 },
                 {
                     "datum": "2026-11-09",
-                    "wert": 13.1
+                    "wert": 13.9
                 },
                 {
                     "datum": "2026-11-10",
-                    "wert": 15.4
+                    "wert": 14.3
                 }
             ],
             "schlaf_minuten": [
                 {
+                    "datum": "2026-08-12",
+                    "wert": 459
+                },
+                {
+                    "datum": "2026-08-13",
+                    "wert": 378
+                },
+                {
+                    "datum": "2026-08-14",
+                    "wert": 449
+                },
+                {
+                    "datum": "2026-08-15",
+                    "wert": 387
+                },
+                {
+                    "datum": "2026-08-16",
+                    "wert": 431
+                },
+                {
+                    "datum": "2026-08-17",
+                    "wert": 499
+                },
+                {
+                    "datum": "2026-08-18",
+                    "wert": 424
+                },
+                {
+                    "datum": "2026-08-19",
+                    "wert": 497
+                },
+                {
+                    "datum": "2026-08-20",
+                    "wert": 419
+                },
+                {
+                    "datum": "2026-08-21",
+                    "wert": 435
+                },
+                {
+                    "datum": "2026-08-22",
+                    "wert": 432
+                },
+                {
+                    "datum": "2026-08-23",
+                    "wert": 408
+                },
+                {
+                    "datum": "2026-08-24",
+                    "wert": 456
+                },
+                {
+                    "datum": "2026-08-25",
+                    "wert": 427
+                },
+                {
+                    "datum": "2026-08-26",
+                    "wert": 378
+                },
+                {
+                    "datum": "2026-08-27",
+                    "wert": 395
+                },
+                {
+                    "datum": "2026-08-28",
+                    "wert": 389
+                },
+                {
+                    "datum": "2026-08-29",
+                    "wert": 425
+                },
+                {
+                    "datum": "2026-08-30",
+                    "wert": 390
+                },
+                {
+                    "datum": "2026-08-31",
+                    "wert": 439
+                },
+                {
+                    "datum": "2026-09-01",
+                    "wert": 417
+                },
+                {
+                    "datum": "2026-09-02",
+                    "wert": 406
+                },
+                {
+                    "datum": "2026-09-03",
+                    "wert": 379
+                },
+                {
+                    "datum": "2026-09-04",
+                    "wert": 375
+                },
+                {
+                    "datum": "2026-09-05",
+                    "wert": 376
+                },
+                {
+                    "datum": "2026-09-06",
+                    "wert": 429
+                },
+                {
+                    "datum": "2026-09-07",
+                    "wert": 418
+                },
+                {
+                    "datum": "2026-09-08",
+                    "wert": 399
+                },
+                {
+                    "datum": "2026-09-09",
+                    "wert": 349
+                },
+                {
+                    "datum": "2026-09-10",
+                    "wert": 471
+                },
+                {
+                    "datum": "2026-09-11",
+                    "wert": 465
+                },
+                {
+                    "datum": "2026-09-12",
+                    "wert": 333
+                },
+                {
+                    "datum": "2026-09-13",
+                    "wert": 388
+                },
+                {
+                    "datum": "2026-09-14",
+                    "wert": 385
+                },
+                {
+                    "datum": "2026-09-15",
+                    "wert": 426
+                },
+                {
+                    "datum": "2026-09-16",
+                    "wert": 390
+                },
+                {
+                    "datum": "2026-09-17",
+                    "wert": 442
+                },
+                {
+                    "datum": "2026-09-18",
+                    "wert": 430
+                },
+                {
+                    "datum": "2026-09-19",
+                    "wert": 427
+                },
+                {
+                    "datum": "2026-09-20",
+                    "wert": 450
+                },
+                {
+                    "datum": "2026-09-21",
+                    "wert": 419
+                },
+                {
+                    "datum": "2026-09-22",
+                    "wert": 446
+                },
+                {
+                    "datum": "2026-09-23",
+                    "wert": 386
+                },
+                {
+                    "datum": "2026-09-24",
+                    "wert": 433
+                },
+                {
+                    "datum": "2026-09-25",
+                    "wert": 447
+                },
+                {
+                    "datum": "2026-09-26",
+                    "wert": 454
+                },
+                {
+                    "datum": "2026-09-27",
+                    "wert": 437
+                },
+                {
+                    "datum": "2026-09-28",
+                    "wert": 447
+                },
+                {
+                    "datum": "2026-09-29",
+                    "wert": 446
+                },
+                {
+                    "datum": "2026-09-30",
+                    "wert": 404
+                },
+                {
                     "datum": "2026-10-01",
-                    "wert": 384.0
+                    "wert": 442
+                },
+                {
+                    "datum": "2026-10-01",
+                    "wert": 20
                 },
                 {
                     "datum": "2026-10-02",
-                    "wert": 414.0
+                    "wert": 419
                 },
                 {
                     "datum": "2026-10-03",
-                    "wert": 375.0
+                    "wert": 423
                 },
                 {
                     "datum": "2026-10-04",
-                    "wert": 375.0
+                    "wert": 402
                 },
                 {
                     "datum": "2026-10-05",
-                    "wert": 434.0
+                    "wert": 402
                 },
                 {
                     "datum": "2026-10-06",
-                    "wert": 438.0
+                    "wert": 361
                 },
                 {
                     "datum": "2026-10-07",
-                    "wert": 455.0
+                    "wert": 428
                 },
                 {
                     "datum": "2026-10-08",
-                    "wert": 496.0
+                    "wert": 372
                 },
                 {
                     "datum": "2026-10-09",
-                    "wert": 423.0
+                    "wert": 438
                 },
                 {
                     "datum": "2026-10-10",
-                    "wert": 380.0
+                    "wert": 374
                 },
                 {
                     "datum": "2026-10-11",
-                    "wert": 378.0
+                    "wert": 359
                 },
                 {
                     "datum": "2026-10-12",
-                    "wert": 447.0
+                    "wert": 386
                 },
                 {
                     "datum": "2026-10-13",
-                    "wert": 440.0
+                    "wert": 412
                 },
                 {
                     "datum": "2026-10-14",
-                    "wert": 476.0
+                    "wert": 375
                 },
                 {
                     "datum": "2026-10-15",
-                    "wert": 474.0
+                    "wert": 391
                 },
                 {
                     "datum": "2026-10-16",
-                    "wert": 448.0
+                    "wert": 365
                 },
                 {
                     "datum": "2026-10-17",
-                    "wert": 415.0
+                    "wert": 421
                 },
                 {
                     "datum": "2026-10-18",
-                    "wert": 461.0
+                    "wert": 419
                 },
                 {
                     "datum": "2026-10-19",
-                    "wert": 431.0
+                    "wert": 437
                 },
                 {
                     "datum": "2026-10-20",
-                    "wert": 451.0
+                    "wert": 430
                 },
                 {
                     "datum": "2026-10-21",
-                    "wert": 419.0
+                    "wert": 389
                 },
                 {
                     "datum": "2026-10-22",
-                    "wert": 361.0
+                    "wert": 450
                 },
                 {
                     "datum": "2026-10-23",
-                    "wert": 491.0
+                    "wert": 431
                 },
                 {
                     "datum": "2026-10-24",
-                    "wert": 460.0
+                    "wert": 457
+                },
+                {
+                    "datum": "2026-10-24",
+                    "wert": 20
                 },
                 {
                     "datum": "2026-10-25",
-                    "wert": 377.0
+                    "wert": 438
                 },
                 {
                     "datum": "2026-10-26",
-                    "wert": 447.0
+                    "wert": 476
                 },
                 {
                     "datum": "2026-10-27",
-                    "wert": 453.0
+                    "wert": 452
                 },
                 {
                     "datum": "2026-10-28",
-                    "wert": 456.0
+                    "wert": 422
                 },
                 {
                     "datum": "2026-10-29",
-                    "wert": 389.0
-                },
-                {
-                    "datum": "2026-10-29",
-                    "wert": 35.0
+                    "wert": 362
                 },
                 {
                     "datum": "2026-10-30",
-                    "wert": 396.0
+                    "wert": 456
                 },
                 {
                     "datum": "2026-10-31",
-                    "wert": 492.0
+                    "wert": 448
                 },
                 {
                     "datum": "2026-11-01",
-                    "wert": 366.0
+                    "wert": 430
                 },
                 {
                     "datum": "2026-11-02",
-                    "wert": 426.0
+                    "wert": 448
                 },
                 {
                     "datum": "2026-11-03",
-                    "wert": 417.0
+                    "wert": 450
                 },
                 {
                     "datum": "2026-11-04",
-                    "wert": 409.0
+                    "wert": 449
                 },
                 {
                     "datum": "2026-11-05",
-                    "wert": 486.0
+                    "wert": 431
                 },
                 {
                     "datum": "2026-11-06",
-                    "wert": 409.0
+                    "wert": 526
                 },
                 {
                     "datum": "2026-11-07",
-                    "wert": 453.0
+                    "wert": 399
+                },
+                {
+                    "datum": "2026-11-07",
+                    "wert": 20
                 },
                 {
                     "datum": "2026-11-08",
-                    "wert": 360.0
+                    "wert": 414
                 },
                 {
                     "datum": "2026-11-09",
-                    "wert": 381.0
+                    "wert": 420
                 },
                 {
                     "datum": "2026-11-10",
-                    "wert": 402.0
+                    "wert": 372
                 }
             ]
         }
